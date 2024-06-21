@@ -6,8 +6,10 @@
     "WASI_SDK_PATH": "/usr/local/lib/wasi-sdk-20.0/"
   },
   "features": {
-    "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0.0.9": {
-      "version": "20"
+    "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0.0.15": {
+      "version": "20",
+      "wasmtime_version": "v22.0.0",
+      "wit_version": "0.19.2"
     },
     "ghcr.io/devcontainers/features/common-utils": {}
   },

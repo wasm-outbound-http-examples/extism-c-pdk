@@ -7,6 +7,9 @@ This devcontainer is configured to provide you a wasi-sdk 20.0.
 
 ## Instructions for this devcontainer
 
+Tested with Extism C PDK [v1.0.1](https://github.com/extism/c-pdk/tree/v1.0.1),
+Extism CLI [v1.5.1](https://github.com/extism/cli/releases/tag/v1.5.1).
+
 ### Preparation
 
 1. Open this repo in devcontainer, e.g. using Github Codespaces.
@@ -16,7 +19,7 @@ This devcontainer is configured to provide you a wasi-sdk 20.0.
 2. Download the `extism-pdk.h` header file, the only required part of Extism C PDK:
 
 ```sh
-wget https://raw.githubusercontent.com/extism/c-pdk/main/extism-pdk.h
+wget https://raw.githubusercontent.com/extism/c-pdk/v1.0.1/extism-pdk.h
 ```
 
 ### Building
@@ -34,8 +37,8 @@ For testing purposes, you can invoke functions from Extism plugins with [Extism 
 1. Install `Extism CLI` from Github releases: 
 
 ```sh
-wget https://github.com/extism/cli/releases/download/v0.3.4/extism-v0.3.4-linux-amd64.tar.gz
-tar -xzf extism-v0.3.4-linux-amd64.tar.gz
+wget https://github.com/extism/cli/releases/download/v1.5.1/extism-v1.5.1-linux-amd64.tar.gz -O /tmp/extism.tar.gz
+tar -xzf /tmp/extism.tar.gz -C /tmp ; mv /tmp/extism .
 ```
 
 And now you have `extism` binary in current folder.
