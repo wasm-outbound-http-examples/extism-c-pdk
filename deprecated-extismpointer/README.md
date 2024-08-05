@@ -1,22 +1,27 @@
-# Use Extism PDK for С to send HTTP(s) requests from inside WASM
+# Use Extism PDK for С to send HTTP(s) requests from inside WASM (deprecated low-level approach)
 
-This devcontainer is configured to provide you a wasi-sdk 20.0.
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wasm-outbound-http-examples/extism-c-pdk)
-
+> [!WARNING]
+> Approach listed on this page uses [low-level API](https://github.com/extism/c-pdk/blob/v1.0.1/README.md?plain=1#L398) 
+> and [deprecated](https://github.com/extism/c-pdk/blob/v1.0.1/extism-pdk.h#L99) function.
+> It's collected here for historical purposes.
 
 ## Instructions for this devcontainer
 
 Tested with Extism C PDK [v1.0.1](https://github.com/extism/c-pdk/tree/v1.0.1),
-Extism CLI [v1.5.2](https://github.com/extism/cli/releases/tag/v1.5.2).
+Extism CLI [v1.5.2](https://github.com/extism/cli/releases/tag/v1.5.2), wasi-sdk 20.0 .
 
 ### Preparation
 
 1. Open this repo in devcontainer, e.g. using Github Codespaces.
    Type or copy/paste following commands to devcontainer's terminal.
 
+2. `cd` into the folder of this example:
 
-2. Download the `extism-pdk.h` header file, the only required part of Extism C PDK:
+```sh
+cd deprecated-extismpointer
+```
+
+3. Download the `extism-pdk.h` header file, the only required part of Extism C PDK:
 
 ```sh
 wget https://raw.githubusercontent.com/extism/c-pdk/v1.0.1/extism-pdk.h
@@ -52,11 +57,5 @@ And now you have `extism` binary in current folder.
 ### Finish
 
 Perform your own experiments if desired.
-
----
-
-An [additional example](deprecated-extismpointer/README.md) using low-level API is in `deprecated-extismpointer` folder.
-
-This devcontainer is based on ideas from [dev-wasm/dev-wasm-c](https://github.com/dev-wasm/dev-wasm-c).
 
 <sub>Created for (wannabe-awesome) [list](https://github.com/vasilev/HTTP-request-from-inside-WASM)</sub>
